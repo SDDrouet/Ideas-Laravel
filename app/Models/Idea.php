@@ -11,6 +11,12 @@ class Idea extends Model
 {
     use HasFactory;
 
+    // Añadimos esta propiedades para que los campos no se puedan modificar
+    protected $fillable = ['user_id', 'title', 'description'];
+
+    //Añadimos este campo para gestionar el formato de la fecha
+    protected $casts = ['created_at' => 'datetime'];
+
     /**
      * Get the user that owns the Idea
      *

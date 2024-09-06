@@ -15,7 +15,7 @@ return new class extends Migration
             $table->id();
             $table->string('title');
             $table->string('description');
-            $table->string('likes');
+            $table->string('likes')->default(0);
             $table->timestamps();
 
             //Claves foraneas
